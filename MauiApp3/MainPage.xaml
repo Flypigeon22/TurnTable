@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.MainPage">
+
+    <Grid RowDefinitions="0.5*,0.5*"
+          RowSpacing="20">
+        <Grid Grid.Row="0" 
+              RowDefinitions="Auto,Auto,Auto"
+              ColumnDefinitions="0.33*,0.33*,0.33*">
+            <Frame x:Name="Frame1"  Grid.Row="0" Grid.Column="0" BackgroundColor="White" WidthRequest="130" HeightRequest="130" CornerRadius="10">
+                <Label x:Name="label1" Text="" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black"  FontSize="20"/>
+            </Frame>
+            <Frame x:Name="Frame2" Grid.Row="0"  Grid.Column="1" BackgroundColor="White" WidthRequest="130" HeightRequest="130" CornerRadius="10">
+                <Label x:Name="label2" Text="" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black"  FontSize="20"/>
+            </Frame>
+            <Frame x:Name="Frame3" Grid.Row="0" Grid.Column="2" BackgroundColor="White" WidthRequest="130" HeightRequest="130" CornerRadius="10">
+                <Label x:Name="label3" Text="" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black"  FontSize="20"/>
+            </Frame>
+            <Frame x:Name="Frame4" Grid.Row="1" Grid.Column="0" BackgroundColor="White" WidthRequest="130" HeightRequest="130" CornerRadius="10">
+                <Label x:Name="label4" Text="" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black"  FontSize="20"/>
+            </Frame>
+            <Frame x:Name="Frame5" Grid.Row="1"  Grid.Column="1" BackgroundColor="White" WidthRequest="130" HeightRequest="130" CornerRadius="10">
+                <Label x:Name="label5" Text="" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black"  FontSize="20"/>
+            </Frame>
+            <Frame x:Name="Frame6" Grid.Row="1" Grid.Column="2" BackgroundColor="White" WidthRequest="130" HeightRequest="130" CornerRadius="10">
+                <Label x:Name="label6" Text="" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black"  FontSize="20"/>
+            </Frame>
+            <Frame x:Name="Frame7" Grid.Row="2" Grid.Column="0" BackgroundColor="White" WidthRequest="130" HeightRequest="130" CornerRadius="10">
+                <Label x:Name="label7" Text="" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black"  FontSize="20"/>
+            </Frame>
+            <Frame x:Name="Frame8" Grid.Row="2"  Grid.Column="1" BackgroundColor="White" WidthRequest="130" HeightRequest="130" CornerRadius="10">
+                <Label x:Name="label8" Text="" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black"  FontSize="20"/>
+            </Frame>
+            <Frame x:Name="Frame9" Grid.Row="2" Grid.Column="2" BackgroundColor="White" WidthRequest="130" HeightRequest="130" CornerRadius="10">
+                <Label x:Name="label9" Text="" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black"  FontSize="20"/>
+            </Frame>
+        </Grid>
+        <Grid  Grid.Row="1">
+            <Button BackgroundColor="LightGray" Text="啟動" WidthRequest="300" HeightRequest="300" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="20" Clicked="OnStartClicked" />
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
