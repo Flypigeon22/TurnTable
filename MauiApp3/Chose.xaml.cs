@@ -1,14 +1,18 @@
 ﻿
 
 
+using Plugin.Maui.Audio;
+
 namespace MauiApp3
 {
     public partial class Chose : ContentPage
     {
+        private readonly IAudioManager audioManager;
         public static List<string> textList { get; private set; } = new List<string>();
-        public Chose()
+        public Chose(IAudioManager audioManager)
         {
             InitializeComponent();
+            this.audioManager = audioManager;
             textList = new List<string>();
 
         }
@@ -62,7 +66,7 @@ namespace MauiApp3
         {
             if (textList.Count>1)
             {
-                Navigation.PushAsync(new MainPage());
+                Navigation.PushAsync(new MainPage(audioManager));
             }
             if (textList.Count <= 1)
             {

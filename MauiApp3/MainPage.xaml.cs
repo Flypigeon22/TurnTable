@@ -1,14 +1,18 @@
 ﻿using System;
+using Plugin.Maui.Audio;
 using Microsoft.Maui.Controls;
 
 namespace MauiApp3
 {
     public partial class MainPage : ContentPage
     {
+        public static string food;
+        private readonly IAudioManager audioManager;
         List<string> textListFromChose = Chose.textList;
-        public MainPage()
+        public MainPage(IAudioManager audioManager)
         {
             InitializeComponent();
+            this.audioManager = audioManager;
             InitializePage();
         }
         private void InitializePage()
@@ -80,15 +84,20 @@ namespace MauiApp3
                         if (i == randomIncrement - 1)
                         {
                             Frame frame = FindFrame($"Frame{i + 1}");  // Assuming your Label names are like "frame1", "frame2", etc.
-                                                                       // 改变 Frame 背景颜色
+                                                                          // 改变 Frame 背景颜色
                             frame.BackgroundColor = Color.FromHex("#FFFF00");  // 你可以替换为你想要的颜色
-                                                                               // 在0.5秒后还原颜色
+
+
+                            Label labell = FindLabel($"label{i + 1}"); 
+                            food = labell.Text;
+
                         }
                       
                     }
                 }
             }
-          
+            await Task.Delay(500);
+            Navigation.PushAsync(new Imagemusic(audioManager));
         }
     }
 
